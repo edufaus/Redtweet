@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Redtweet</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="firestore.js" defer> </script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Redtweet</h1>
+  <div id="app">
+    <div>
+      <input v-model="Thread"></input> <button v-on:click="searchPosts">Search</button>
+    </div>
+     <li v-for="post in Posts">{{post}}</li>
+      <input v-model="newPost"> </input> <button v-on:click="addPost">Post</button>
+  </div>
+</body>
+</html>
